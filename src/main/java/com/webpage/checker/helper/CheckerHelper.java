@@ -6,8 +6,11 @@ public class CheckerHelper {
                 .replace("\r", "")
                 .replace("\t", "")
                 .replaceAll("\\s", " ")
-                .replace("  ", " ")
-                .replace("  ", " ")
-                .replace("\"", "'");
+                .replaceAll(" +", " ")
+                .replace("\"", "'")
+//                .replace(" class='table-wrapper", "")
+//                .replace(" class='property-calendar-td-bd'", "")
+//                .replace(" class='property-calendar-td'", "")
+                .replace("> <", "><");
     }
 }
