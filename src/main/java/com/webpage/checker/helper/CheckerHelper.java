@@ -8,9 +8,7 @@ public class CheckerHelper {
                 .replaceAll("\\s", " ")
                 .replaceAll(" +", " ")
                 .replace("\"", "'")
-//                .replace(" class='table-wrapper", "")
-//                .replace(" class='property-calendar-td-bd'", "")
-//                .replace(" class='property-calendar-td'", "")
+                .replace(" style='color:red;'", "")
                 .replace("> <", "><");
     }
 }
