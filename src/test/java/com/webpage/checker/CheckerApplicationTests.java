@@ -1,10 +1,5 @@
 package com.webpage.checker;
 
-import org.apache.commons.lang3.StringUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -45,15 +40,7 @@ class CheckerApplicationTests {
 
     @Test
     void test3BedroomNights() throws IOException {
-        Document doc = Jsoup.connect(Checker.THREE_BEDROOM).get();
-        Elements els = doc.getElementsByClass("table property-calendar-table");
-        ArrayList<Integer> counts = new ArrayList<>();
-        for (Element element : els) {
-            int count = StringUtils.countMatches(element.toString(), "background-color:#FFCC66;");
-            count += StringUtils.countMatches(element.toString(), "background: url('https://cdn.liverez.com/0/images/yahoo-calendar-departure-bg.gif')");
-            count += StringUtils.countMatches(element.toString(), "background: url('https://cdn.liverez.com/0/images/yahoo-calendar-overlap-bg.gif')");
-            counts.add(count);
-        }
+        ArrayList<Integer> counts = checkerService.retrieveRoomNights(Checker.THREE_BEDROOM);
         assertEquals(counts.get(0), 23);
         assertEquals(counts.get(1), 7);
         assertEquals(counts.get(2), 0);
@@ -66,15 +53,8 @@ class CheckerApplicationTests {
 
     @Test
     void test2BedroomNights() throws IOException {
-        Document doc = Jsoup.connect(Checker.TWO_BEDROOM).get();
-        Elements els = doc.getElementsByClass("table property-calendar-table");
-        ArrayList<Integer> counts = new ArrayList<>();
-        for (Element element : els) {
-            int count = StringUtils.countMatches(element.toString(), "background-color:#FFCC66;");
-            count += StringUtils.countMatches(element.toString(), "background: url('https://cdn.liverez.com/0/images/yahoo-calendar-departure-bg.gif')");
-            count += StringUtils.countMatches(element.toString(), "background: url('https://cdn.liverez.com/0/images/yahoo-calendar-overlap-bg.gif')");
-            counts.add(count);
-        }
+
+        ArrayList<Integer> counts = checkerService.retrieveRoomNights(Checker.TWO_BEDROOM);
         assertEquals(counts.get(0), 30);
         assertEquals(counts.get(1), 8);
         assertEquals(counts.get(2), 0);
