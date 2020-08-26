@@ -30,8 +30,8 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'org.junit.vintage:junit-vintage-engine'
-    testCompile 'org.spockframework:spock-core:2.0-M3-groovy-3.0'
-    compile "org.codehaus.groovy:groovy:3.0.5"
+    testImplementation 'org.spockframework:spock-core:2.0-M3-groovy-3.0'
+    implementation "org.codehaus.groovy:groovy:3.0.5"
 }
 
 test {
