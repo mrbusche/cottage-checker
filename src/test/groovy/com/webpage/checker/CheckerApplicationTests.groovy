@@ -45,7 +45,7 @@ class CheckerApplicationTests extends Specification {
         where:
         month       | index | val
         "September" | 0     | 12
-        "October"   | 1     | 0
+        "October"   | 1     | 3
         "November"  | 2     | 0
         "December"  | 3     | 0
         "January"   | 4     | 0
