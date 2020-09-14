@@ -44,7 +44,7 @@ class CheckerApplicationTests extends Specification {
         counts.get(index) == val
         where:
         month       | index | val
-        "September" | 0     | 12
+        "September" | 0     | 15
         "October"   | 1     | 3
         "November"  | 2     | 0
         "December"  | 3     | 0
