@@ -17,7 +17,7 @@ class CheckerApplicationTests extends Specification {
         when:
         int reviewCount = checkerService.retrieveReviewCount(Checker.TWO_BEDROOM)
         then:
-        reviewCount == 5
+        reviewCount == 6
     }
 
     @Unroll
