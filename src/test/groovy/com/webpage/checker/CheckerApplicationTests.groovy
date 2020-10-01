@@ -27,14 +27,14 @@ class CheckerApplicationTests extends Specification {
         counts.get(index) == val
         where:
         month       | index | val
-        "September" | 0     | 13
-        "October"   | 1     | 11
-        "November"  | 2     | 0
-        "December"  | 3     | 0
-        "January"   | 4     | 0
-        "February"  | 5     | 0
-        "March"     | 6     | 0
-        "April"     | 7     | 0
+        "October"   | 0     | 11
+        "November"  | 1     | 0
+        "December"  | 2     | 0
+        "January"   | 3     | 0
+        "February"  | 4     | 0
+        "March"     | 5     | 0
+        "April"     | 6     | 0
+        "May"       | 7     | 0
     }
 
     @Unroll
@@ -44,13 +44,13 @@ class CheckerApplicationTests extends Specification {
         counts.get(index) == val
         where:
         month       | index | val
-        "September" | 0     | 15
-        "October"   | 1     | 9
-        "November"  | 2     | 0
-        "December"  | 3     | 0
-        "January"   | 4     | 0
-        "February"  | 5     | 0
-        "March"     | 6     | 0
-        "April"     | 7     | 0
+        "October"   | 0     | 9
+        "November"  | 1     | 0
+        "December"  | 2     | 0
+        "January"   | 3     | 0
+        "February"  | 4     | 0
+        "March"     | 5     | 0
+        "April"     | 6     | 0
+        "September" | 7     | 0
     }
 }
