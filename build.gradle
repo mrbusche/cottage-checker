@@ -32,7 +32,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'org.junit.vintage:junit-vintage-engine'
     testImplementation 'org.spockframework:spock-core:2.0-M3-groovy-3.0'
-    implementation "org.codehaus.groovy:groovy:3.0.5"
+    implementation "org.codehaus.groovy:groovy:3.0.6"
 }
 
 test {
