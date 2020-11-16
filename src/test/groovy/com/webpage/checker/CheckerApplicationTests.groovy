@@ -39,7 +39,7 @@ class CheckerApplicationTests extends Specification {
 
     @Unroll
     def "test 2 bedroom nights #month"() throws IOException {
-        ArrayList<Integer> counts = checkerService.retrieveRoomNights(Checker.TWO_BEDROOM);
+        ArrayList<Integer> counts = checkerService.retrieveRoomNights(Checker.TWO_BEDROOM)
         expect:
         counts.get(index) == bookings
         where:

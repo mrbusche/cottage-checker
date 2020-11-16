@@ -13,11 +13,6 @@ import java.util.ArrayList;
 
 @Service
 public class CheckerService {
-    String retrieveHTML(String url) throws IOException {
-        Document doc = Jsoup.connect(url).get();
-        Elements els = doc.getElementsByClass(Checker.CALENDAR_ELEMENT);
-        return CheckerHelper.removeStuff(els.toString());
-    }
 
     int retrieveReviewCount(String url) throws IOException {
         Document doc = Jsoup.connect(url).get();
