@@ -1,6 +1,5 @@
 package com.webpage.checker;
 
-import com.webpage.checker.helper.CheckerHelper;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
