@@ -6,51 +6,51 @@ import spock.lang.Unroll
 class CheckerApplicationTests extends Specification {
     CheckerService checkerService = new CheckerService()
 
-    def "test 3 bedroom reviews"() throws IOException {
+    def "test Cozy Cottage reviews"() throws IOException {
         when:
-        int reviewCount = checkerService.retrieveReviewCount(Checker.THREE_BEDROOM)
+        int reviewCount = checkerService.retrieveReviewCount(Checker.COZY_COTTAGE)
         then:
         reviewCount == 14
     }
 
-    def "test 2 bedroom reviews"() throws IOException {
+    def "test Haven Hideaway2 bedroom reviews"() throws IOException {
         when:
-        int reviewCount = checkerService.retrieveReviewCount(Checker.TWO_BEDROOM)
+        int reviewCount = checkerService.retrieveReviewCount(Checker.HAVEN_HIDEAWAY)
         then:
         reviewCount == 8
     }
 
     @Unroll
-    def "test 3 bedroom nights #month"() throws IOException {
-        ArrayList<Integer> counts = checkerService.retrieveRoomNights(Checker.THREE_BEDROOM)
+    def "test Cozy Cottage nights #month"() throws IOException {
+        ArrayList<Integer> counts = checkerService.retrieveRoomNights(Checker.COZY_COTTAGE)
         expect:
         counts.get(index) == bookings
         where:
         month      | index | bookings
-        "November" | 0     | 0
-        "December" | 1     | 4
-        "January"  | 2     | 0
-        "February" | 3     | 0
-        "March"    | 4     | 0
-        "April"    | 5     | 0
-        "May"      | 6     | 0
-        "June"     | 7     | 0
+        "December" | 0     | 4
+        "January"  | 1     | 0
+        "February" | 2     | 0
+        "March"    | 3     | 0
+        "April"    | 4     | 0
+        "May"      | 5     | 0
+        "June"     | 6     | 0
+        "July"     | 7     | 6
     }
 
     @Unroll
-    def "test 2 bedroom nights #month"() throws IOException {
-        ArrayList<Integer> counts = checkerService.retrieveRoomNights(Checker.TWO_BEDROOM)
+    def "test Haven Hideaway nights #month"() throws IOException {
+        ArrayList<Integer> counts = checkerService.retrieveRoomNights(Checker.HAVEN_HIDEAWAY)
         expect:
         counts.get(index) == bookings
         where:
         month      | index | bookings
-        "November" | 0     | 0
-        "December" | 1     | 4
-        "January"  | 2     | 0
-        "February" | 3     | 0
-        "March"    | 4     | 0
-        "April"    | 5     | 0
-        "May"      | 6     | 0
-        "June"     | 7     | 0
+        "December" | 0     | 4
+        "January"  | 1     | 0
+        "February" | 2     | 0
+        "March"    | 3     | 0
+        "April"    | 4     | 0
+        "May"      | 5     | 0
+        "June"     | 6     | 0
+        "July"     | 7     | 0
     }
 }
