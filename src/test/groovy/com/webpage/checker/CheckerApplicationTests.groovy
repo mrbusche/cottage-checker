@@ -27,14 +27,14 @@ class CheckerApplicationTests extends Specification {
         counts.get(index) == bookings
         where:
         month      | index | bookings
-        "January"  | 0     | 0
-        "February" | 1     | 3
-        "March"    | 2     | 0
-        "April"    | 3     | 0
-        "May"      | 4     | 5
-        "June"     | 5     | 3
-        "July"     | 6     | 11
-        "August"   | 7     | 14
+        "February" | 0     | 3
+        "March"    | 1     | 0
+        "April"    | 2     | 0
+        "May"      | 3     | 5
+        "June"     | 4     | 3
+        "July"     | 5     | 11
+        "August"   | 6     | 14
+        "September"| 7     | 0
     }
 
     @Unroll
@@ -44,13 +44,13 @@ class CheckerApplicationTests extends Specification {
         counts.get(index) == bookings
         where:
         month      | index | bookings
-        "January"  | 0     | 0
-        "February" | 1     | 0
-        "March"    | 2     | 0
-        "April"    | 3     | 0
-        "May"      | 4     | 5
-        "June"     | 5     | 0
-        "July"     | 6     | 13
-        "August"   | 7     | 7
+        "February" | 0     | 0
+        "March"    | 1     | 0
+        "April"    | 2     | 0
+        "May"      | 3     | 5
+        "June"     | 4     | 0
+        "July"     | 5     | 13
+        "August"   | 6     | 7
+        "September"| 7     | 0
     }
 }
