@@ -30,4 +30,5 @@ jobs:
       run: ./gradlew build sonarqube --info
     - name: Gradle Cache
       uses: burrunan/gradle-cache-action@v1
-
+      with:
+        gradle-version: nightly
