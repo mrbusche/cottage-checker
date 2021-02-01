@@ -33,8 +33,8 @@ class CheckerApplicationTests extends Specification {
         "April"    | 3     | 0
         "May"      | 4     | 5
         "June"     | 5     | 3
-        "July"     | 6     | 9
-        "August"   | 7     | 9
+        "July"     | 6     | 11
+        "August"   | 7     | 14
     }
 
     @Unroll
@@ -50,7 +50,7 @@ class CheckerApplicationTests extends Specification {
         "April"    | 3     | 0
         "May"      | 4     | 5
         "June"     | 5     | 0
-        "July"     | 6     | 11
-        "August"   | 7     | 2
+        "July"     | 6     | 13
+        "August"   | 7     | 7
     }
 }
