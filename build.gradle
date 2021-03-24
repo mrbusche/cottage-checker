@@ -13,6 +13,7 @@ sourceCompatibility = '15'
 repositories {
     mavenCentral()
     maven { url = uri("https://repo.spring.io/milestone") }
+	maven { url 'https://projectlombok.org/edge-releases' }
 }
 
 dependencies {
@@ -26,8 +27,8 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     implementation 'org.jsoup:jsoup:1.13.1'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok:edge-SNAPSHOT'
+    annotationProcessor 'org.projectlombok:lombok:edge-SNAPSHOT'
     implementation 'org.apache.commons:commons-lang3'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'org.junit.vintage:junit-vintage-engine'
