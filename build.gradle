@@ -27,7 +27,7 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     implementation 'org.jsoup:jsoup:1.13.1'
-    compileOnly 'org.projectlombok:lombok:edge-SNAPSHOT'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:edge-SNAPSHOT'
     implementation 'org.apache.commons:commons-lang3'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
