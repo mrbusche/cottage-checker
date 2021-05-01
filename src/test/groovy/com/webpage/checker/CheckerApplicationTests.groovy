@@ -29,7 +29,7 @@ class CheckerApplicationTests extends Specification {
         month      | index | bookings
         "April"    | 0     | 0
         "May"      | 1     | 9
-        "June"     | 2     | 4
+        "June"     | 2     | 9
         "July"     | 3     | 21
         "August"   | 4     | 18
         "September"| 5     | 0
@@ -47,7 +47,7 @@ class CheckerApplicationTests extends Specification {
         "April"    | 0     | 0
         "May"      | 1     | 5
         "June"     | 2     | 0
-        "July"     | 3     | 24
+        "July"     | 3     | 21
         "August"   | 4     | 24
         "September"| 5     | 0
         "October"  | 6     | 0
