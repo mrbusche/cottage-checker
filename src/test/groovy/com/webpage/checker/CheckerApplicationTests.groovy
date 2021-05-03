@@ -27,7 +27,7 @@ class CheckerApplicationTests extends Specification {
         counts.get(index) == bookings
         where:
         month      | index | bookings
-        "May"      | 0     | 9
+        "May"      | 0     | 7
         "June"     | 1     | 9
         "July"     | 2     | 21
         "August"   | 3     | 18
@@ -44,7 +44,7 @@ class CheckerApplicationTests extends Specification {
         counts.get(index) == bookings
         where:
         month      | index | bookings
-        "May"      | 0     | 5
+        "May"      | 0     | 0
         "June"     | 1     | 0
         "July"     | 2     | 21
         "August"   | 3     | 24
