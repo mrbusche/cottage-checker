@@ -31,7 +31,7 @@ class CheckerApplicationTests extends Specification {
         "June"     | 1     | 13
         "July"     | 2     | 26
         "August"   | 3     | 18
-        "September"| 4     | 0
+        "September"| 4     | 4
         "October"  | 5     | 0
         "November" | 6     | 0
         "December" | 7     | 0
