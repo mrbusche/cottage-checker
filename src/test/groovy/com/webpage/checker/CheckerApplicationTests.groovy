@@ -10,7 +10,7 @@ class CheckerApplicationTests extends Specification {
         when:
         int reviewCount = checkerService.retrieveReviewCount(Checker.COZY_COTTAGE)
         then:
-        reviewCount == 14
+        reviewCount == 15
     }
 
     def "test Haven Hideaway reviews"() throws IOException {
@@ -27,8 +27,8 @@ class CheckerApplicationTests extends Specification {
         counts.get(index) == bookings
         where:
         month      | index | bookings
-        "June"     | 0     | 13
-        "July"     | 1     | 26
+        "June"     | 0     | 12
+        "July"     | 1     | 27
         "August"   | 2     | 26
         "September"| 3     | 7
         "October"  | 4     | 0
