@@ -28,3 +28,5 @@ jobs:
       uses: burrunan/gradle-cache-action@v1.10
       with:
         gradle-version: nightly
+    - name: Build and analyze
+      run: ./gradlew build --info
