@@ -10,7 +10,7 @@ class CheckerApplicationTests extends Specification {
         when:
         int reviewCount = checkerService.retrieveReviewCount(Checker.COZY_COTTAGE)
         then:
-        reviewCount == 16
+        reviewCount == 17
     }
 
     def "test Haven Hideaway reviews"() throws IOException {
