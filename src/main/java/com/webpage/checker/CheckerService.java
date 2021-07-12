@@ -21,7 +21,6 @@ public class CheckerService {
             try {
                 Document doc = Jsoup.connect(url).timeout(timeout).get();
                 Elements els = doc.getElementsByClass(Checker.REVIEWS_ELEMENT);
-                retries = maxRetries;
                 return els.size();
             } catch (IOException e) {
                 System.out.println("Loading URL " + url + " failed. Retrying time #: " + (retries + 1));
@@ -44,7 +43,6 @@ public class CheckerService {
                     count += StringUtils.countMatches(element.toString(), "background: url('https://cdn.liverez.com/0/images/yahoo-calendar-overlap-bg.gif')");
                     counts.add(count);
                 }
-                retries = maxRetries;
                 return counts;
             } catch (IOException e) {
                 System.out.println("Loading URL " + url + " failed. Retrying time #: " + (retries + 1));
