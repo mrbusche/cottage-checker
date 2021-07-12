@@ -24,6 +24,7 @@ public class CheckerService {
                 retries = maxRetries;
                 return els.size();
             } catch (IOException e) {
+                System.out.println("Loading URL " + url + " failed. Retrying time #: " + (retries + 1));
                 retries++;
             }
         }
@@ -46,6 +47,7 @@ public class CheckerService {
                 retries = maxRetries;
                 return counts;
             } catch (IOException e) {
+                System.out.println("Loading URL " + url + " failed. Retrying time #: " + (retries + 1));
                 retries++;
             }
         }
