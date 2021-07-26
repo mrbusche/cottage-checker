@@ -17,7 +17,7 @@ class CheckerApplicationTests extends Specification {
         when:
         int reviewCount = checkerService.retrieveReviewCount(Checker.HAVEN_HIDEAWAY)
         then:
-        reviewCount == 10
+        reviewCount == 11
     }
 
     @Unroll
