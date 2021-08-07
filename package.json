@@ -1,0 +1,22 @@
+{
+  "name": "cottage-checker",
+  "version": "1.0.0",
+  "description": "cottage-checker",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrbusche/cottage-checker.git"
+  },
+  "author": "https://github.com/mrbusche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrbusche/cottage-checker/issues"
+  },
+  "homepage": "https://github.com/mrbusche/cottage-checker#readme",
+  "devDependencies": {
+    "cypress": "^8.2.0"
+  }
+}
