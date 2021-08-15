@@ -45,7 +45,7 @@ class CheckerApplicationTests extends Specification {
         where:
         month      | index | bookings
         "August"   | 0     | 27
-        "September"| 1     | 7
+        "September"| 1     | 11
         "October"  | 2     | 0
         "November" | 3     | 0
         "December" | 4     | 0
