@@ -6,6 +6,6 @@ describe('check cottages', () => {
 
     it('check cozy cottage vrbo', () => {
         cy.visit('https://www.vrbo.com/2111556');
-        cy.contains('5 Reviews');
+        cy.contains('6 Reviews');
     })
 })
