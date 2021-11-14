@@ -16,7 +16,7 @@ describe('check cottage reviews', () => {
     })
 })
 
-describe('check cottage prices for a week', () => {
+describe('check cottage prices for a week on Jaqua', () => {
     it('check Cozy May prices', () => {
         cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=160236');
         cy.get('#txtStartDate').click();
@@ -166,7 +166,7 @@ describe('check cottage prices for a week', () => {
     })
 })
 
-describe('check cottage prices for 3 days', () => {
+describe('check cottage prices for 3 days on Jaqua', () => {
     it('check Cozy May prices', () => {
         cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=160236');
         cy.get('#txtStartDate').click();
