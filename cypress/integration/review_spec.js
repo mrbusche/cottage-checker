@@ -15,3 +15,325 @@ describe('check cottages', () => {
         });
     })
 })
+
+describe('check cottage prices for a week', () => {
+    it('check Cozy May prices', () => {
+        cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=160236');
+        cy.get('#txtStartDate').click();
+        cy.get('div.datepicker').click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(30).click();
+        cy.get('button.btn.btn-primary').click();
+        // 5/24 - 5/31
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$214.29 X 7 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$1500');
+        });
+    })
+
+    it('check Cozy June prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$278.57 X 7 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$1950');
+        });
+    })
+
+    it('check Cozy July prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$278.57 X 7 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$1950');
+        });
+    })
+
+    it('check Cozy August prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$214.29 X 7 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$1500');
+        });
+    })
+
+    it('check Haven May prices', () => {
+        cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=168702');
+        cy.get('#txtStartDate').click();
+        cy.get('div.datepicker').click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(30).click();
+        cy.get('button.btn.btn-primary').click();
+        // 5/24 - 5/31
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$200 X 7 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$1400');
+        });
+    })
+
+    it('check Cozy June prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$250 X 7 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$1750');
+        });
+    })
+
+    it('check Cozy July prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$250 X 7 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$1750');
+        });
+    })
+
+    it('check Cozy August prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$200 X 7 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$1400');
+        });
+    })
+})
+
+describe('check cottage prices for 3 days', () => {
+    it('check Cozy May prices', () => {
+        cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=160236');
+        cy.get('#txtStartDate').click();
+        cy.get('div.datepicker').click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(30).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(33).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$210 X 3 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$675');
+        });
+    })
+
+    it('check Cozy June prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(27).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$295 X 3 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$885');
+        });
+    })
+
+    it('check Cozy July prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(27).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$295 X 3 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$885');
+        });
+    })
+
+    it('check Cozy August prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(27).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$295 X 3 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$885');
+        });
+    })
+
+    it.only('check Haven May prices', () => {
+        cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=168702');
+        cy.get('#txtStartDate').click();
+        cy.get('div.datepicker').click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(30).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(33).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$210 X 3 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$630');
+        });
+    })
+
+    it.only('check Haven June prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(27).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$275 X 3 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$825');
+        });
+    })
+
+    it.only('check Haven July prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(27).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$275 X 3 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$825');
+        });
+    })
+
+    it.only('check Haven August prices', () => {
+        cy.get('a.property-instant-quote-change-dates').first().click();
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(27).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('.discounted-rent').first().should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$295 X 3 nights');
+        });
+        cy.get('.discounted-rent').eq(1).should(($div) => {
+            const text = $div.text();
+            expect(text).to.eq('$885');
+        });
+    })
+})
