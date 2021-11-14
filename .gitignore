@@ -29,3 +29,5 @@ hs_err_pid*
 node_modules
 .classpath
 .settings/org.eclipse.buildship.core.prefs
+bin/**
+.project
