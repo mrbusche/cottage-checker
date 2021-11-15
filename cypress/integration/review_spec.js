@@ -337,3 +337,137 @@ describe('check cottage prices for 3 days on Jaqua', () => {
         });
     })
 })
+
+describe('check that 2 day bookings are not allowed', () => {
+    it('check Cozy May', () => {
+        cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=160236');
+        cy.get('#txtStartDate').click();
+        cy.get('div.datepicker').click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(30).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(32).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.get('div.property-instant-quote-message').first().should(($div) => {
+            const text = $div.text().trim();
+            expect(text).to.eq('This Property is Available but requires a stay of at least 3 nights.');
+        })
+    })
+
+    it('check Cozy June', () => {
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(26).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+                cy.get('div.property-instant-quote-message').first().should(($div) => {
+            const text = $div.text().trim();
+            expect(text).to.eq('This Property is Available but requires a stay of at least 3 nights.');
+        })
+    })
+
+    it('check Cozy July', () => {
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(26).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('div.property-instant-quote-message').first().should(($div) => {
+            const text = $div.text().trim();
+            expect(text).to.eq('This Property is Available but requires a stay of at least 3 nights.');
+        })
+    })
+
+    it('check Cozy August', () => {
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(26).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('div.property-instant-quote-message').first().should(($div) => {
+            const text = $div.text().trim();
+            expect(text).to.eq('This Property is Available but requires a stay of at least 3 nights.');
+        })
+    })
+
+    it.only('check Haven May prices', () => {
+        cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=168702');
+        cy.get('#txtStartDate').click();
+        cy.get('div.datepicker').click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(30).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(32).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.get('div.property-instant-quote-message').first().should(($div) => {
+            const text = $div.text().trim();
+            expect(text).to.eq('This Property is Available but requires a stay of at least 3 nights.');
+        })
+    })
+
+    it.only('check Haven June prices', () => {
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(26).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('div.property-instant-quote-message').first().should(($div) => {
+            const text = $div.text().trim();
+            expect(text).to.eq('This Property is Available but requires a stay of at least 3 nights.');
+        })
+    })
+
+    it.only('check Haven July prices', () => {
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(24).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(26).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('div.property-instant-quote-message').first().should(($div) => {
+            const text = $div.text().trim();
+            expect(text).to.eq('This Property is Available but requires a stay of at least 3 nights.');
+        })
+    })
+
+    it.only('check Haven August prices', () => {
+        cy.get('#txtStartDate').click();
+        cy.get('th.next').first().click();
+        cy.get('td.day').eq(14).click();
+        // change end date
+        cy.get('#txtEndDate').click();
+        cy.get('td.day').eq(16).click();
+        cy.get('button.btn.btn-primary').click();
+        cy.wait(500);
+        cy.get('div.property-instant-quote-message').first().should(($div) => {
+            const text = $div.text().trim();
+            expect(text).to.eq('This Property is Available but requires a stay of at least 3 nights.');
+        })
+    })
+})
