@@ -405,7 +405,7 @@ describe('check that 2 day bookings are not allowed', () => {
         })
     })
 
-    it.only('check Haven May prices', () => {
+    it('check Haven May prices', () => {
         cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=168702');
         cy.get('#txtStartDate').click();
         cy.get('div.datepicker').click();
@@ -426,7 +426,7 @@ describe('check that 2 day bookings are not allowed', () => {
         })
     })
 
-    it.only('check Haven June prices', () => {
+    it('check Haven June prices', () => {
         cy.get('#txtStartDate').click();
         cy.get('th.next').first().click();
         cy.get('td.day').eq(24).click();
@@ -441,7 +441,7 @@ describe('check that 2 day bookings are not allowed', () => {
         })
     })
 
-    it.only('check Haven July prices', () => {
+    it('check Haven July prices', () => {
         cy.get('#txtStartDate').click();
         cy.get('th.next').first().click();
         cy.get('td.day').eq(24).click();
@@ -456,7 +456,7 @@ describe('check that 2 day bookings are not allowed', () => {
         })
     })
 
-    it.only('check Haven August prices', () => {
+    it('check Haven August prices', () => {
         cy.get('#txtStartDate').click();
         cy.get('th.next').first().click();
         cy.get('td.day').eq(14).click();
