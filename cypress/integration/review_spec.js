@@ -27,7 +27,7 @@ describe('check cottage prices for a week on Jaqua', () => {
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
-        cy.get('td.day').eq(30).click();
+        cy.get('td.day').eq(10).click();
         cy.get('button.btn.btn-primary').click();
         // 5/24 - 5/31
         cy.get('.discounted-rent').first().should(($div) => {
@@ -101,7 +101,7 @@ describe('check cottage prices for a week on Jaqua', () => {
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
-        cy.get('td.day').eq(30).click();
+        cy.get('td.day').eq(10).click();
         cy.get('button.btn.btn-primary').click();
         // 5/24 - 5/31
         cy.get('.discounted-rent').first().should(($div) => {
@@ -177,7 +177,7 @@ describe('check cottage prices for 3 days on Jaqua', () => {
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
-        cy.get('td.day').eq(30).click();
+        cy.get('td.day').eq(10).click();
         // change end date
         cy.get('#txtEndDate').click();
         cy.get('td.day').eq(33).click();
@@ -262,7 +262,7 @@ describe('check cottage prices for 3 days on Jaqua', () => {
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
-        cy.get('td.day').eq(30).click();
+        cy.get('td.day').eq(10).click();
         // change end date
         cy.get('#txtEndDate').click();
         cy.get('td.day').eq(33).click();
@@ -349,7 +349,7 @@ describe('check that 2 day bookings are not allowed', () => {
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
-        cy.get('td.day').eq(30).click();
+        cy.get('td.day').eq(10).click();
         // change end date
         cy.get('#txtEndDate').click();
         cy.get('td.day').eq(32).click();
@@ -415,7 +415,7 @@ describe('check that 2 day bookings are not allowed', () => {
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
-        cy.get('td.day').eq(30).click();
+        cy.get('td.day').eq(10).click();
         // change end date
         cy.get('#txtEndDate').click();
         cy.get('td.day').eq(32).click();
