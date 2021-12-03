@@ -26,7 +26,6 @@ describe('check cottage prices for a week on Jaqua', () => {
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
-        cy.get('th.next').first().click();
         cy.get('td.day').eq(10).click();
         cy.get('button.btn.btn-primary').click();
         // 5/24 - 5/31
@@ -95,7 +94,6 @@ describe('check cottage prices for a week on Jaqua', () => {
         cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=168702');
         cy.get('#txtStartDate').click();
         cy.get('div.datepicker').click();
-        cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
@@ -171,7 +169,6 @@ describe('check cottage prices for 3 days on Jaqua', () => {
         cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=160236');
         cy.get('#txtStartDate').click();
         cy.get('div.datepicker').click();
-        cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
@@ -256,7 +253,6 @@ describe('check cottage prices for 3 days on Jaqua', () => {
         cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=168702');
         cy.get('#txtStartDate').click();
         cy.get('div.datepicker').click();
-        cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
@@ -348,7 +344,6 @@ describe('check that 2 day bookings are not allowed', () => {
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
-        cy.get('th.next').first().click();
         cy.get('td.day').eq(10).click();
         // change end date
         cy.get('#txtEndDate').click();
@@ -409,7 +404,6 @@ describe('check that 2 day bookings are not allowed', () => {
         cy.visit('https://www.milakeshorevacations.com/vacation-rental-home.asp?PageDataID=168702');
         cy.get('#txtStartDate').click();
         cy.get('div.datepicker').click();
-        cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
         cy.get('th.next').first().click();
