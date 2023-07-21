@@ -6,6 +6,6 @@ describe('check cottage reviews', () => {
 
     it('check haven hideaway vrbo reviews', () => {
         cy.visit('https://www.vrbo.com/2111556');
-        cy.get('[data-stid="reviews-link"').first().should('contain.text', 'See all 11 reviews');
+        cy.get('[data-stid="reviews-link"').first().should('contain.text', 'See all 12 reviews');
     })
 })
